@@ -1,0 +1,4 @@
+interface:
+  display_name: "MDLDM Monetize"
+  short_description: "为已有内容的博主诊断知识变现路线并设计首款产品与30天验证方案"
+  default_prompt: "使用 $mdldm-monetize 诊断我的知识变现阶段，并设计首款产品和 30 天验证计划。"
