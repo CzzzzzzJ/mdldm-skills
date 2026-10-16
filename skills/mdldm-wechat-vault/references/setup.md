@@ -1,6 +1,6 @@
 # 干净环境安装与首次初始化
 
-目标：一台没有 wx-cli、奕辰 Skill、旧密钥或旧解密库的 Mac。仍需微信桌面版登录自己的账号并存在本地数据；未同步到电脑的内容不能恢复。
+适用于 macOS 微信 4.x。需要登录本人账号并已有本地聊天数据；读取范围不包含尚未同步到电脑的记录。
 
 ## 1. 安装通用 Python 与独立 runtime
 
@@ -55,7 +55,7 @@ VAULT_PY="$HOME/Library/Application Support/mdldm-wechat-vault/runtime/bin/pytho
 "$VAULT_PY" scripts/vault.py --account personal capture-keys --spawn-copy --seconds 240
 ```
 
-副本保存在本包运行根目录的 apps/WeChat.app。该命令复制并 ad-hoc 重签副本，不重签 /Applications 下的原应用。副本仍使用微信相同的账号容器，不能把它当成独立账号；系统权限、应用签名、登录可能需要用户处理。采集结束只解除附加，不自动杀掉副本进程。此路径尚未在本机验证，不能保证任意 macOS/微信版本均可注入。
+副本保存在本包运行根目录的 apps/WeChat.app。该命令复制并 ad-hoc 重签副本，不重签 /Applications 下的原应用。副本仍使用微信相同的账号容器，不能把它当成独立账号；系统权限、应用签名、登录可能需要用户处理。采集结束只解除附加，不自动杀掉副本进程。此路径的兼容性取决于 macOS 权限和微信版本。
 
 不要关闭 SIP，不要擅自清空微信 TCC 权限，不把用户密码传给 Agent。若仍被系统拒绝，保留明确失败状态，不能继续声称已捕获。
 

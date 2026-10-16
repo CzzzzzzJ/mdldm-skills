@@ -22,4 +22,3 @@
 - https://www.zetetic.net/sqlcipher/design/
 - https://www.sqlite.org/fileformat2.html#walformat
 
-本版本不调用或依赖先前分析的两个微信项目。它们仅作为设计讨论背景。

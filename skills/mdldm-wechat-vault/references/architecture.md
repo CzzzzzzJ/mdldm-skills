@@ -26,7 +26,7 @@ mdldm-wechat-vault/
 
 CLI/未来 HTTP → service。密钥模块只产出逐库 key；crypto 不知道账号或微信进程；wal 只使用 codec；snapshot 编排私有文件生成；query 只读已经发布的快照，不参与采集或解密。
 
-没有 subprocess 调用其他微信工具，没有读取 ~/.wx-cli 或其他 Skill 的配置。Frida、AES、Zstandard 是通用底层库，不是第三方微信项目的业务实现。本包代码为独立实现，参考公开格式与既有项目的数据结构理解，不捆绑它们的源码。
+运行依赖为 Python、Frida、PyCryptodome 和 Zstandard。数据获取、解密和查询由本包模块实现。
 
 ## 运行数据（不随 Skill 分发）
 
