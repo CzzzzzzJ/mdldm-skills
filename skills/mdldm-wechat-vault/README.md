@@ -159,3 +159,10 @@ result = execute({
 ```
 
 测试覆盖解密查询、WAL 提交边界、损坏数据拒绝、快照保留、分页及账号绑定。更多说明见[测试指南](./references/validation.md)。
+
+## 联系麦当
+
+想了解更多 AI 实战教程、交流使用体验或项目合作，欢迎联系：
+
+- **知识站：** [麦当的知识站](https://www.mdldm.club)
+- **微信：** `gaozhizhaji`
