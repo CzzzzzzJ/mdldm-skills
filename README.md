@@ -1,10 +1,30 @@
 # mdldm-skills
 
-> 麦当 mdldm 的 Agent Skills 合集（小红书笔记 / 知识变现诊断 / 微信本地记录读取）
+麦当 mdldm 的 Agent Skills 合集：小红书笔记 · 知识变现诊断 · 微信本地记录。
 
-本仓库是 **一个仓、多个 Skill** 的 monorepo。推荐从此处安装；旧独立仓 `omi`、`mdldm-monetize` 仍保留约 90 天兼容，但新项目请改用本仓。
+**一个仓、多个 Skill。** 新项目请装这里；旧独立仓 `omi`、`mdldm-monetize` 仍保留约 90 天兼容。
 
 **主页：** [mdldm.club](https://www.mdldm.club) · **作者：** 麦当 mdldm
+
+---
+
+## 先装一个
+
+```bash
+npx skills add CzzzzzzJ/mdldm-skills --skill omi
+npx skills add CzzzzzzJ/mdldm-skills --skill mdldm-monetize
+npx skills add CzzzzzzJ/mdldm-skills --skill mdldm-wechat-vault
+```
+
+一次全装：
+
+```bash
+npx skills add CzzzzzzJ/mdldm-skills --all
+```
+
+微信 Skill 装完还要初始化独立 Python 环境和本人微信数据，见 [使用教程](./skills/mdldm-wechat-vault/README.md)。安装不会自动改微信。
+
+带界面的微信工作台：[wechat-vault](https://github.com/CzzzzzzJ/wechat-vault)
 
 ---
 
@@ -14,33 +34,7 @@
 |-------|------|------|
 | `omi` | 小红书图文笔记生产线（分镜 JSON + 封面/内页） | [`skills/omi`](./skills/omi) |
 | `mdldm-monetize` | 知识变现诊断：阶段判断、首款产品与 30 天验证计划 | [`skills/mdldm-monetize`](./skills/mdldm-monetize) |
-| `mdldm-wechat-vault` | 微信本地记录读取（macOS 实验版）：独立密钥采集、解密快照与查询，不依赖其他微信工具 | [`使用与二次开发`](./skills/mdldm-wechat-vault/README.md) |
-
----
-
-## 安装（skills.sh）
-
-安装单个 Skill：
-
-```bash
-npx skills add CzzzzzzJ/mdldm-skills --skill omi
-```
-
-```bash
-npx skills add CzzzzzzJ/mdldm-skills --skill mdldm-monetize
-```
-
-```bash
-npx skills add CzzzzzzJ/mdldm-skills --skill mdldm-wechat-vault
-```
-
-微信 Skill 安装后还需初始化独立 Python 环境和本人微信数据，详见[使用教程](./skills/mdldm-wechat-vault/README.md)。安装 Skill 不会自动修改微信。
-
-一次安装全部：
-
-```bash
-npx skills add CzzzzzzJ/mdldm-skills --all
-```
+| `mdldm-wechat-vault` | 微信本地记录读取（macOS 实验版）：独立密钥采集、解密快照与查询 | [`使用与二次开发`](./skills/mdldm-wechat-vault/README.md) |
 
 ---
 
@@ -51,27 +45,11 @@ mdldm-skills/
 ├── README.md
 └── skills/
     ├── omi/
-    │   ├── SKILL.md
-    │   ├── README.md
-    │   └── prompts/
     ├── mdldm-wechat-vault/
-    │   ├── SKILL.md
-    │   ├── README.md
-    │   ├── requirements.txt
-    │   ├── scripts/
-    │   ├── references/
-    │   └── tests/
     └── mdldm-monetize/
-        ├── SKILL.md
-        ├── README.md
-        ├── LICENSE
-        ├── agents/
-        ├── references/
-        ├── templates/
-        └── examples/
 ```
 
-每个子目录是独立 Skill：入口为 `SKILL.md`，细节见各自 README。
+每个子目录是独立 Skill：入口 `SKILL.md`，细节看各自 README。
 
 ---
 
@@ -79,12 +57,18 @@ mdldm-skills/
 
 | 旧仓 | 状态 |
 |------|------|
-| [CzzzzzzJ/omi](https://github.com/CzzzzzzJ/omi) | 已迁入本仓 `skills/omi`；旧仓保留兼容 |
-| [CzzzzzzJ/mdldm-monetize](https://github.com/CzzzzzzJ/mdldm-monetize) | 已迁入本仓 `skills/mdldm-monetize`；旧仓保留兼容 |
+| [CzzzzzzJ/omi](https://github.com/CzzzzzzJ/omi) | 已迁入 `skills/omi`；旧仓保留兼容 |
+| [CzzzzzzJ/mdldm-monetize](https://github.com/CzzzzzzJ/mdldm-monetize) | 已迁入 `skills/mdldm-monetize`；旧仓保留兼容 |
 
 ---
 
+## 接下来你可以
+
+1. **装合集**：上面的 `npx skills add`
+2. **Star** 本仓跟更新
+3. 知识站 / 合作：[mdldm.club](https://www.mdldm.club)
+4. 微信：`gaozhizhaji778` · X：[@czzzzzzJ_](https://x.com/czzzzzzJ_)
+
 ## License
 
-各 Skill 保留原许可证（多为 MIT）。详见子目录内 `LICENSE` / README。
-
+各 Skill 保留原许可证（多为 MIT）。见子目录 `LICENSE` / README。
