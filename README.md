@@ -1,6 +1,6 @@
 # mdldm-skills
 
-麦当 mdldm 的 Agent Skills 合集：小红书笔记 · 知识变现诊断 · 微信本地记录 · 口播剪辑。
+麦当 mdldm 的 Agent Skills 合集：小红书笔记 · 知识变现诊断 · 微信本地记录 · 口播剪辑 · 写作/商单脚本。
 
 **一个仓、多个 Skill。** 新项目请装这里；旧独立仓 `omi`、`mdldm-monetize` 仍保留约 90 天兼容。
 
@@ -15,6 +15,7 @@ npx skills add CzzzzzzJ/mdldm-skills --skill omi
 npx skills add CzzzzzzJ/mdldm-skills --skill mdldm-monetize
 npx skills add CzzzzzzJ/mdldm-skills --skill mdldm-wechat-vault
 npx skills add CzzzzzzJ/mdldm-skills --skill maidang-koubo
+npx skills add CzzzzzzJ/mdldm-skills --skill content-script-local-draft
 ```
 
 一次全装：
@@ -37,6 +38,7 @@ npx skills add CzzzzzzJ/mdldm-skills --all
 | `mdldm-monetize` | 知识变现诊断：阶段判断、首款产品与 30 天验证计划 | [`skills/mdldm-monetize`](./skills/mdldm-monetize) |
 | `mdldm-wechat-vault` | 微信本地记录读取（macOS 实验版）：独立密钥采集、解密快照与查询 | [`使用与二次开发`](./skills/mdldm-wechat-vault/README.md) |
 | `maidang-koubo` | 麦当剪辑口播：录屏讲解类视频的粗剪、术语校对、单行字幕、成果前置、截图信息卡、BGM 与打码 | [`skills/maidang-koubo`](./skills/maidang-koubo) |
+| `content-script-local-draft` | 麦当写作/商单：观点口播、商单脚本、封面与多平台发布素材 | [`skills/content-script-local-draft`](./skills/content-script-local-draft) |
 
 ---
 
@@ -49,7 +51,8 @@ mdldm-skills/
     ├── omi/
     ├── mdldm-wechat-vault/
     ├── mdldm-monetize/
-    └── maidang-koubo/
+    ├── maidang-koubo/
+    └── content-script-local-draft/
 ```
 
 每个子目录是独立 Skill：入口 `SKILL.md`，细节看各自 README。
