@@ -1,0 +1,12 @@
+<!doctype html><html><head><meta charset="utf-8"><title>selftest</title>
+<style>html,body{margin:0;background:#101216}canvas{display:block}</style></head>
+<body><canvas id="c" width="1920" height="1080"></canvas><script>
+const g = document.getElementById('c').getContext('2d');
+window.DUR = 2;
+window.render = t => { const p = Math.min(1, t / 2), e = 1 - Math.pow(1 - p, 3);
+  g.fillStyle = '#101216'; g.fillRect(0, 0, 1920, 1080);
+  g.strokeStyle = '#2a2f38'; g.lineWidth = 4; g.beginPath(); g.moveTo(360, 620); g.lineTo(1560, 620); g.stroke();
+  g.fillStyle = '#E8553A'; g.beginPath(); g.arc(360 + 1200 * e, 620, 46, 0, 7); g.fill();
+  g.fillStyle = '#f2f2ee'; g.font = '700 120px sans-serif'; g.textAlign = 'center'; g.fillText('环境就绪', 960, 460); };
+window.READY = true;
+</script></body></html>
